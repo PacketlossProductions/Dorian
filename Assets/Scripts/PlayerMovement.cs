@@ -1,14 +1,16 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    Rigidbody2D rb;
     PlayerCollisions pc;
+    Animator animator;
 
     private float horizontal;
     private float speed = 8.0f;
-    private float jumpingPower = 4.0f;
+    private float jumpingPower = 6.0f;
     private bool facingRight = true;
 
     private float minScale = 2.0f;
@@ -20,20 +22,30 @@ public class PlayerMovement : MonoBehaviour
     public float scaleReq = 5.0f;
     public float scaleVal = 5.0f;
 
+    // Properties
+    private bool _isMoving;
+
     // Animation state
-    public bool IsMoving { get; private set; }
+    public bool IsMoving
+    {
+        get => _isMoving;
+        private set { _isMoving = value; animator.SetBool("IsMoving", value); }
+    }
 
     // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         pc = GetComponent<PlayerCollisions>();
+        animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed * playerScale, rb.velocity.y);
+        float direction = pc.IsWallFront ? 0.0f : horizontal;
+        rb.velocity = new Vector2(direction * speed * playerScale, rb.velocity.y);
         if (!facingRight && horizontal > 0)
         {
             Flip();
@@ -42,7 +54,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+    }
 
+    private void Update()
+    {
         // Exponential smoothing for the scale
         float baseScale = 5.0f;
         float scale = Camera.main.orthographicSize;
@@ -50,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
         scaleVal = newScale;
         playerScale = newScale / baseScale;
-        transform.localScale = new Vector3(playerScale, playerScale, playerScale);
+        transform.localScale = new Vector3(facingRight ? playerScale : -playerScale, playerScale, 1.0f);
 
         Camera.main.orthographicSize = newScale;
         Camera.main.transform.position = transform.position + new Vector3(0.0f, 0.0f, -10.0f);
@@ -73,9 +88,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(context.started)
+        if (context.started)
         {
-            if(pc.IsGrounded)
+            if (pc.IsGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             }

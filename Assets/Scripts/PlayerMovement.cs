@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         pc = GetComponent<PlayerCollisions>();
         animator = GetComponent<Animator>();
-
     }
 
     // Update is called once per frame
@@ -62,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         float baseScale = 5.0f;
         float scale = Camera.main.orthographicSize;
         float newScale = scale + ((scaleReq - scale) * (1.0f - Mathf.Exp(-scaleSpeed)));
+        animator.SetFloat("VerticalSpeed", rb.velocity.y);
 
         scaleVal = newScale;
         playerScale = newScale / baseScale;

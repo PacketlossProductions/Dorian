@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     PlayerCollisions pc;
     Animator animator;
+    GameObject gp;
 
     private float horizontal;
     private float speed = 8.0f;
@@ -48,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         pc = GetComponent<PlayerCollisions>();
         animator = GetComponent<Animator>();
+        gp = transform.Find("GrabPos").gameObject;
     }
 
     // Update is called once per frame
@@ -79,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
             playerScale = newScale / baseScale;
 
         }
+
         transform.localScale = new Vector3(facingRight ? playerScale : -playerScale, playerScale, 1.0f);
 
         Camera.main.orthographicSize = scaleVal;
@@ -143,19 +146,49 @@ public class PlayerMovement : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             if (frontHits[i].transform.gameObject.tag == "PickUpable")
-            { 
-                HeldItem= frontHits[i].transform.gameObject;
-                HeldItem.transform.SetParent(transform,true);
+            {
+                HeldItem = frontHits[i].transform.gameObject;
+                Vector3 offset = gp.transform.localPosition * (HeldItem.transform.localScale.y / 2);
+
+                if (gameObject.transform.localScale.x < 0)
+                {
+                    offset = new Vector3(offset.x * -1, offset.y, offset.z);
+                }
+
+                HeldItem.transform.position = gp.transform.position + offset;
+                HeldItem.transform.SetParent(transform, true);
                 Debug.LogWarning("HeldItem picked up");
-                HeldItem.GetComponent<Rigidbody2D>().simulated= false;
+                HeldItem.GetComponent<Rigidbody2D>().isKinematic = true;
                 break;
             }
         }
     }
 
-     public void Drop()
-     {
-        HeldItem.transform.SetParent (null,true);
-        HeldItem.GetComponent<Rigidbody2D>().simulated = true;
+    public void Drop()
+    {
+        HeldItem.transform.SetParent(null, true);
+        HeldItem.GetComponent<Rigidbody2D>().isKinematic = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (HeldItem == null)
+            return;
+
+        if (collision.gameObject != HeldItem)
+            return;
+
+        collision.gameObject.transform.localPosition = collision.gameObject.transform.localPosition * 1.1f;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (HeldItem == null)
+            return;
+
+        if (collision.gameObject != HeldItem)
+            return;
+
+        collision.gameObject.transform.localPosition = collision.gameObject.transform.localPosition * 1.1f;
     }
 }

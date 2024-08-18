@@ -1,23 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        // levelID = scene.GetComponent<LevelID>();
-    }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-                                                // go to a next level
-    }
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        int SceneCount = SceneManager.sceneCountInBuildSettings;
+        // Debug.Log("NextSceneIndex ="+nextSceneIndex);
+        // Debug.Log("SceneCount ="+SceneCount);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (SceneCount > nextSceneIndex)
+        {
+            SceneManager.LoadScene(nextSceneIndex);                                     // go to a next level
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");                                         // go to main menu
+        }
     }
 }

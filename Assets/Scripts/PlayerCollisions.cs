@@ -18,7 +18,7 @@ public class PlayerCollisions : MonoBehaviour
 
     public float squishyness = 0.0f;
 
-
+    
     [SerializeField]
     private bool _isGrounded;
     public bool IsGrounded
@@ -65,7 +65,13 @@ public class PlayerCollisions : MonoBehaviour
         IsWallFront = rb.Cast(frontDirection, castFilter, frontHits, groundDistance) > 0;
         IsWallBack = rb.Cast(backDirection, castFilter, backHits, groundDistance) > 0;
 
-        float hspace = distanceTest(Vector2.left, castFilter) + distanceTest(Vector2.right, castFilter);
+        float frontDist = distanceTest(frontDirection, castFilter);
+        float backDist = distanceTest(frontDirection, castFilter);
+
+        IsWallBack = frontDist < (rb.size.x / 2.0f * transform.localScale.y) +groundDistance;
+        IsWallFront = backDist < (rb.size.x / 2.0f * transform.localScale.y) + groundDistance;
+
+        float hspace = frontDist + backDist;
         float vspace = distanceTest(Vector2.up, castFilter) + distanceTest(Vector2.down, castFilter);
         float vsquish = (rb.size.y * transform.localScale.y) / vspace;
         float hsquish = (rb.size.x * transform.localScale.y) / hspace;

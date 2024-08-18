@@ -11,9 +11,12 @@ public class PlayerCollisions : MonoBehaviour
     RaycastHit2D[] ceilingHits = new RaycastHit2D[5];
     RaycastHit2D[] frontHits = new RaycastHit2D[5];
     RaycastHit2D[] backHits = new RaycastHit2D[5];
+    RaycastHit2D[] distanceHits = new RaycastHit2D[5];
 
     Vector2 frontDirection => gameObject.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
     Vector2 backDirection => gameObject.transform.localScale.x > 0 ? Vector2.left : Vector2.right;
+
+    public float squishyness = 0.0f;
 
 
     [SerializeField]
@@ -61,5 +64,22 @@ public class PlayerCollisions : MonoBehaviour
         IsCeiling = rb.Cast(Vector2.up, castFilter, ceilingHits, groundDistance) > 0;
         IsWallFront = rb.Cast(frontDirection, castFilter, frontHits, groundDistance) > 0;
         IsWallBack = rb.Cast(backDirection, castFilter, backHits, groundDistance) > 0;
+
+        float hspace = distanceTest(Vector2.left, castFilter) + distanceTest(Vector2.right, castFilter);
+        float vspace = distanceTest(Vector2.up, castFilter) + distanceTest(Vector2.down, castFilter);
+        float vsquish = (rb.size.y * transform.localScale.y) / vspace;
+        float hsquish = (rb.size.x * transform.localScale.y) / hspace;
+        squishyness = Mathf.Max(vsquish, hsquish);
+    }
+
+    float distanceTest(Vector2 direction, ContactFilter2D contactFilter)
+    {
+        float maxdist = Mathf.Max(rb.size.x, rb.size.y) * transform.localScale.y * 2;
+        float result = float.PositiveInfinity;
+        if(Physics2D.Raycast(transform.position, direction, contactFilter, distanceHits, maxdist) > 0)
+        {
+            result = Vector2.Distance(distanceHits[0].point, transform.position);
+        }
+        return result;
     }
 }

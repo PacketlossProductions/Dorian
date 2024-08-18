@@ -57,17 +57,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // Exponential smoothing for the scale
-        float baseScale = 5.0f;
-        float scale = Camera.main.orthographicSize;
-        float newScale = scale + ((scaleReq - scale) * (1.0f - Mathf.Exp(-scaleSpeed)));
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
 
-        scaleVal = newScale;
-        playerScale = newScale / baseScale;
+        float baseScale = 5.0f;
+        float scale = Camera.main.orthographicSize;
+        if (pc.squishyness < 1.0f || scaleReq < scaleVal)
+        {
+            // Exponential smoothing for the scale
+            float newScale = scale + ((scaleReq - scale) * (1.0f - Mathf.Exp(-scaleSpeed)));
+            scaleVal = newScale;
+            playerScale = newScale / baseScale;
+
+        }
         transform.localScale = new Vector3(facingRight ? playerScale : -playerScale, playerScale, 1.0f);
 
-        Camera.main.orthographicSize = newScale;
+        Camera.main.orthographicSize = scaleVal;
         Camera.main.transform.position = transform.position + new Vector3(0.0f, 0.0f, -10.0f);
     }
 

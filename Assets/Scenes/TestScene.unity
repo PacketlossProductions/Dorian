@@ -6451,6 +6451,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5881609717443838045, guid: fdf187ce836c84547a6d8af86424a424, type: 3}
+      propertyPath: castFilter.useLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7514617763076939670, guid: fdf187ce836c84547a6d8af86424a424, type: 3}
       propertyPath: m_Name
       value: Player

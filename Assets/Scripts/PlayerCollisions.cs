@@ -18,7 +18,7 @@ public class PlayerCollisions : MonoBehaviour
 
     public float squishyness = 0.0f;
 
-
+    
     [SerializeField]
     private bool _isGrounded;
     public bool IsGrounded

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8367582813426236931}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,6 +212,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 93582b2d-6302-494e-8564-35a71668532c
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8223207521960089291}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: ItemPickUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 11836904-f3b1-48d2-87ef-372b8f00d5f0
+    m_ActionName: Player/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -320,6 +336,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   groundDistance: 0.05
+  squishyness: 0
   _isGrounded: 0
   _isCeiling: 0
   _isWallFront: 0

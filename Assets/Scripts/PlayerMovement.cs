@@ -25,11 +25,21 @@ public class PlayerMovement : MonoBehaviour
     // Properties
     private bool _isMoving;
 
+
     // Animation state
     public bool IsMoving
     {
         get => _isMoving;
         private set { _isMoving = value; animator.SetBool("IsMoving", value); }
+    }
+
+    // Property for grabbing
+    private GameObject _heldObject;
+    public GameObject HeldItem
+
+    {
+        get => _heldObject;
+        private set { _heldObject = value; animator.SetBool("IsHolding", value != null); }
     }
 
     // Start is called before the first frame update
@@ -75,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
         Camera.main.transform.position = transform.position + new Vector3(0.0f, 0.0f, -10.0f);
     }
 
+
     private void Flip()
     {
         facingRight = !facingRight;
@@ -105,5 +116,46 @@ public class PlayerMovement : MonoBehaviour
     {
         float newScale = scaleReq + (context.ReadValue<float>() * -0.005f);
         scaleReq = Mathf.Clamp(newScale, minScale, maxScale);
+    }
+
+    public void ItemPickUp(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            if (HeldItem == null)
+            {
+                PickUp();
+            }
+            else
+            {
+                Drop();
+                Debug.LogWarning("HeldItem dropped up");
+                HeldItem = null;
+            }
+        }
+    }
+
+    public void PickUp()
+    {
+        RaycastHit2D[] frontHits = new RaycastHit2D[5];
+        Vector2 frontDirection = gameObject.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+        int count = rb.Cast(frontDirection, frontHits, 1.0f);
+        for (int i = 0; i < count; i++)
+        {
+            if (frontHits[i].transform.gameObject.tag == "PickUpable")
+            { 
+                HeldItem= frontHits[i].transform.gameObject;
+                HeldItem.transform.SetParent(transform,true);
+                Debug.LogWarning("HeldItem picked up");
+                HeldItem.GetComponent<Rigidbody2D>().simulated= false;
+                break;
+            }
+        }
+    }
+
+     public void Drop()
+     {
+        HeldItem.transform.SetParent (null,true);
+        HeldItem.GetComponent<Rigidbody2D>().simulated = true;
     }
 }

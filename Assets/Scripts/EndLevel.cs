@@ -12,14 +12,16 @@ public class EndLevel : MonoBehaviour
         int SceneCount = SceneManager.sceneCountInBuildSettings;
         // Debug.Log("NextSceneIndex ="+nextSceneIndex);
         // Debug.Log("SceneCount ="+SceneCount);
-
-        if (SceneCount > nextSceneIndex)
+        if (collision.tag == "Player")                                                       // check if player
         {
-            SceneManager.LoadScene(nextSceneIndex);                                     // go to a next level
-        }
-        else
-        {
-            SceneManager.LoadScene("MainMenu");                                         // go to main menu
+            if (SceneCount > nextSceneIndex)
+            {
+                SceneManager.LoadScene(nextSceneIndex);                                     // go to a next level
+            }
+            else
+            {
+                SceneManager.LoadScene("MainMenu");                                         // go to main menu
+            }
         }
     }
 }

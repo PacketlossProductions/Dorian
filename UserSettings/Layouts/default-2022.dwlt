@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 231
+  controlID: 54
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -96,8 +96,8 @@ MonoBehaviour:
     y: 0
     width: 345
     height: 823
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 54
+  controlID: 55
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 55
+  controlID: 56
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -282,7 +282,7 @@ MonoBehaviour:
   - {fileID: 23}
   - {fileID: 18}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -356,9 +356,9 @@ MonoBehaviour:
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -443,9 +443,9 @@ MonoBehaviour:
     localBranches: []
     remoteBranches: []
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: master
@@ -454,10 +454,9 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - c37c71ea73d3c55488a27f6a776d9f70
-        - 1b3f97b18814ea24c8afe5ad6cf2c446
-        - 7dedab70d7029ac4db3d868d5b2672ed
-        - b660c2147f58a7148a48ce9ca31c60c5
+        - b699eb0f912fbbe44add42f97856e9d8
+        - 2e0d5e87f93139f43b8c5348147473c9
+        - 48f78e75bba45c44898287f9a9c75027
         values:
         - path: Assets
           label: Assets
@@ -477,8 +476,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Tilemaps
-          label: Tilemaps
+        - path: Assets\Objects
+          label: Objects
           level: 1
           isFolder: 1
           isContainer: 0
@@ -495,11 +494,11 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Tilemaps\skull.png
-          label: skull.png
+        - path: Assets\Objects\Button
+          label: Button
           level: 2
-          isFolder: 0
-          isContainer: 1
+          isFolder: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -507,17 +506,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Tilemaps\skull.png
-            fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\skull.png
-            projectPath: Assets\Tilemaps\skull.png
+            path: 
+            fullPath: 
+            projectPath: 
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Tilemaps\tree1.png
-          label: tree1.png
-          level: 2
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Objects\Button\AC_Button.controller
+          label: AC_Button.controller
+          level: 3
           isFolder: 0
-          isContainer: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -525,36 +524,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Tilemaps\tree1.png
-            fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree1.png
-            projectPath: Assets\Tilemaps\tree1.png
+            path: Assets\Objects\Button\AC_Button.controller
+            fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Objects\Button\AC_Button.controller
+            projectPath: Assets\Objects\Button\AC_Button.controller
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Tilemaps\tree2.png
-          label: tree2.png
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Tilemaps\tree2.png
-            fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree2.png
-            projectPath: Assets\Tilemaps\tree2.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+            indexStatus: 0
+            workTreeStatus: 3
       folders:
         keys:
         - Assets
-        - Assets\Tilemaps
-        - UserSettings
-        - UserSettings\Layouts
+        - Assets\Objects
+        - Assets\Objects\Button
         values:
         - path: Assets
           label: Assets
@@ -574,8 +554,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Tilemaps
-          label: Tilemaps
+        - path: Assets\Objects
+          label: Objects
           level: 1
           isFolder: 1
           isContainer: 0
@@ -592,27 +572,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
+        - path: Assets\Objects\Button
+          label: Button
+          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -674,8 +636,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Tilemaps
-        label: Tilemaps
+      - path: Assets\Objects
+        label: Objects
         level: 1
         isFolder: 1
         isContainer: 0
@@ -692,117 +654,9 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Tilemaps\skull.png
-        label: skull.png
+      - path: Assets\Objects\Button
+        label: Button
         level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Tilemaps\skull.png
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\skull.png
-          projectPath: Assets\Tilemaps\skull.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Tilemaps\skull.png.meta
-        label: skull.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Tilemaps\skull.png.meta
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\skull.png.meta
-          projectPath: Assets\Tilemaps\skull.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Tilemaps\tree1.png
-        label: tree1.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Tilemaps\tree1.png
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree1.png
-          projectPath: Assets\Tilemaps\tree1.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Tilemaps\tree1.png.meta
-        label: tree1.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Tilemaps\tree1.png.meta
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree1.png.meta
-          projectPath: Assets\Tilemaps\tree1.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Tilemaps\tree2.png
-        label: tree2.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Tilemaps\tree2.png
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree2.png
-          projectPath: Assets\Tilemaps\tree2.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Tilemaps\tree2.png.meta
-        label: tree2.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Tilemaps\tree2.png.meta
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree2.png.meta
-          projectPath: Assets\Tilemaps\tree2.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: UserSettings
-        label: UserSettings
-        level: 0
         isFolder: 1
         isContainer: 0
         isCollapsed: 0
@@ -818,27 +672,9 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
+      - path: Assets\Objects\Button\AC_Button.controller
+        label: AC_Button.controller
+        level: 3
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -848,83 +684,47 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
+          path: Assets\Objects\Button\AC_Button.controller
+          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Objects\Button\AC_Button.controller
+          projectPath: Assets\Objects\Button\AC_Button.controller
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
       selectedNode:
-        path: Assets\Tilemaps\tree1.png
-        label: tree1.png
-        level: 2
+        path: 
+        label: 
+        level: 0
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
-        treeIsCheckable: 1
+        treeIsCheckable: 0
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Tilemaps\tree1.png
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree1.png
-          projectPath: Assets\Tilemaps\tree1.png
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          indexStatus: 0
+          workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Tilemaps\skull.png
-      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\skull.png
-      projectPath: Assets\Tilemaps\skull.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Tilemaps\skull.png.meta
-      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\skull.png.meta
-      projectPath: Assets\Tilemaps\skull.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Tilemaps\tree1.png
-      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree1.png
-      projectPath: Assets\Tilemaps\tree1.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Tilemaps\tree1.png.meta
-      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree1.png.meta
-      projectPath: Assets\Tilemaps\tree1.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Tilemaps\tree2.png
-      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree2.png
-      projectPath: Assets\Tilemaps\tree2.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Tilemaps\tree2.png.meta
-      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Tilemaps\tree2.png.meta
-      projectPath: Assets\Tilemaps\tree2.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
+    - path: Assets\Objects\Button\AC_Button.controller
+      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Objects\Button\AC_Button.controller
+      projectPath: Assets\Objects\Button\AC_Button.controller
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 7 changed files
+    changedFilesText: 1 changed file
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-08-18T18:28:11.888+02:00
+      updatedTimeString: 2024-08-18T20:07:24.029+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-08-18T19:09:40.592+02:00
+      updatedTimeString: 2024-08-18T20:08:30.235+02:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-08-18T19:07:30.857+02:00
+      updatedTimeString: 2024-08-18T20:05:53.281+02:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -1272,13 +1072,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-08-18T17:21:19.424+02:00
+    updatedTimeString: 2024-08-18T20:07:24.029+02:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-08-18T17:21:19.618+02:00
+    updatedTimeString: 2024-08-18T20:08:30.253+02:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-08-18T17:22:06.842+02:00
+    updatedTimeString: 2024-08-18T20:08:30.235+02:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -1555,6 +1355,7 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: 6043249386550429786, guid: ef76978fb2dcaf64f85d8fa872a1b917, type: 2}
     - {fileID: -4796637711390609209, guid: 48f78e75bba45c44898287f9a9c75027, type: 2}
+    - {fileID: -3657816960747413745, guid: 69cf884c34519274b929a44a3f1de463, type: 2}
     m_ValueSerializationHelper:
     - e00: 1.4028777
       e01: 0
@@ -1575,11 +1376,27 @@ MonoBehaviour:
     - e00: 1
       e01: 0
       e02: 0
-      e03: 0
+      e03: 275
       e10: 0
       e11: 1
       e12: 0
-      e13: 0
+      e13: 92
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 275
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 117
       e20: 0
       e21: 0
       e22: 1
@@ -1589,9 +1406,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 48f78e75bba45c44898287f9a9c75027, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 69cf884c34519274b929a44a3f1de463, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -4796637711390609209, guid: 48f78e75bba45c44898287f9a9c75027, type: 2}
+  - m_Target: {fileID: -3657816960747413745, guid: 69cf884c34519274b929a44a3f1de463, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1683,7 +1500,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -41472
+  m_LastSelectedObjectID: 30062
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1744,9 +1561,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 38ad0000
-    m_LastClickedID: 44344
-    m_ExpandedIDs: 00000000ee780000f0780000f2780000f4780000f6780000f87800002279000000ca9a3b
+    m_SelectedIDs: de790000
+    m_LastClickedID: 31198
+    m_ExpandedIDs: 00000000a4790000a6790000a8790000aa790000ac790000ae790000b079000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1774,7 +1591,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ee780000f0780000f2780000f4780000f6780000f8780000
+    m_ExpandedIDs: 00000000a4790000a6790000a8790000aa790000ac790000ae790000b0790000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1801,8 +1618,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000087900000c7900007cab00001a670200e4eb0200ec0effff000000004c6c000036800000227b000034470100aa790000147c0000e46e00001a730000c6e10000188100006e810000de810000ec7500008e730000987b0000507700006877000034790000107700008477000088770000d69effffd89f0000749600005aad0000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000087900000c7900007cab00001a670200e4eb0200ec0effff000000004c6c000036800000227b000034470100aa790000147c0000e46e00001a730000c6e10000188100006e810000de810000ec7500008e730000987b0000507700006877000034790000107700008477000088770000d69effffd89f0000749600005aad000002770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1914,9 +1731,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 36f7ffff
       m_LastClickedID: 0
-      m_ExpandedIDs: 5021fbff7ee3ffff0afbffff267d0000
+      m_ExpandedIDs: fefaffff88750000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2387,9 +2204,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 21.068207, y: -0.47649497, z: 0.4417945}
+    m_Target: {x: 22.049612, y: 0.2780935, z: -4.0592947}
     speed: 2
-    m_Value: {x: 21.068207, y: -0.47649497, z: 0.4417945}
+    m_Value: {x: 21.989128, y: 0.33408192, z: -4.06088}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2439,9 +2256,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.6850574
+    m_Target: 3.3651202
     speed: 2
-    m_Value: 2.6850574
+    m_Value: 3.523686
   m_Ortho:
     m_Target: 1
     speed: 2

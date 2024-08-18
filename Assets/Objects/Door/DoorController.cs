@@ -6,6 +6,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     Animator animator;
+    Collider2D collider;
     public List<GameObject> switches = new List<GameObject>();
 
     private bool isOpen;
@@ -14,6 +15,7 @@ public class DoorController : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        collider = GetComponent<Collider2D>();
     }
 
     void Update()
@@ -32,5 +34,6 @@ public class DoorController : MonoBehaviour
         }
 
         IsOpen = unlocked;
+        collider.enabled = !IsOpen;
     }
 }

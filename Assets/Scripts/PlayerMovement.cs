@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     PlayerCollisions pc;
     Animator animator;
     GameObject gp;
+
+    AudioSource audioSource;
+    public AudioClip audioClipWalk;
 
     private float horizontal;
     private float speed = 8.0f;
@@ -50,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         pc = GetComponent<PlayerCollisions>();
         animator = GetComponent<Animator>();
         gp = transform.Find("GrabPos").gameObject;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -64,6 +69,19 @@ public class PlayerMovement : MonoBehaviour
         else if (facingRight && horizontal < 0)
         {
             Flip();
+        }
+
+        if(horizontal != 0 && pc.IsGrounded)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = audioClipWalk;
+                audioSource.Play();
+            }
+        } else if (audioSource.clip == audioClipWalk)
+        {
+            audioSource.Stop();
+            audioSource.clip = null;
         }
     }
 
@@ -119,11 +137,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(playerScale > 1.0f)
         {
-            return Mathf.Log(playerScale,1/factor) + 1.0f;
+            return (playerScale - 1.0f) * factor + 1.0f;
         }
         if(playerScale < 1.0f)
         {
-            return playerScale;
+            return playerScale * (1 / factor);
         }
         return playerScale;
     }
@@ -145,6 +163,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 Drop();
+                Debug.LogWarning("HeldItem dropped up");
                 HeldItem = null;
             }
         }
@@ -169,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
 
                 HeldItem.transform.position = gp.transform.position + offset;
                 HeldItem.transform.SetParent(transform, true);
+                Debug.LogWarning("HeldItem picked up");
                 HeldItem.GetComponent<Rigidbody2D>().isKinematic = true;
                 break;
             }
@@ -202,4 +222,29 @@ public class PlayerMovement : MonoBehaviour
 
         collision.gameObject.transform.localPosition = collision.gameObject.transform.localPosition * 1.1f;
     }
+
+    /// <summary>
+    /// Find a GO. It might be inactive.
+    /// </summary>
+    /// <param name="parentName">Name of parent GO. Must be active.</param>
+    /// <param name="gameObjectName">Name of GO to find.</param>
+    /// <returns>GO, or null.</returns>
+    public static GameObject FindMaybeDisabledGameObjectByName(string parentName, string gameObjectName)
+    {
+        GameObject go = GameObject.Find(parentName);
+        if (go == null)
+        {
+            return null;
+        }
+        Transform childTransform
+            = go.transform.GetComponentsInChildren<Transform>(true).FirstOrDefault(
+                t => t.name == gameObjectName
+            );
+        if (childTransform == null)
+        {
+            return null;
+        }
+        return childTransform.gameObject;
+    }
+
 }

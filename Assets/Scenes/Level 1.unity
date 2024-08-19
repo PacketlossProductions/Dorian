@@ -509,6 +509,62 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 172285518}
   m_SourcePrefab: {fileID: 100100000, guid: 8473ed6f7edf7ac4386cb8a2dc639ece, type: 3}
+--- !u!1 &1151579974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151579976}
+  - component: {fileID: 1151579975}
+  m_Layer: 0
+  m_Name: Reverb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!167 &1151579975
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151579974}
+  m_Enabled: 1
+  m_MinDistance: 31.7
+  m_MaxDistance: 43.05
+  m_ReverbPreset: 1
+  m_Room: -1000
+  m_RoomHF: -100
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.83
+  m_Reflections: -2602
+  m_ReflectionsDelay: 0.007
+  m_Reverb: 200
+  m_ReverbDelay: 0.011
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
+--- !u!4 &1151579976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151579974}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.943195, y: -0.6043926, z: -0.04241106}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1383527152
 GameObject:
   m_ObjectHideFlags: 0
@@ -76605,6 +76661,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3596657580444059094, guid: 88261b852cb638340bf4afe0f924a91f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3789673941487640831, guid: 88261b852cb638340bf4afe0f924a91f, type: 3}
       propertyPath: m_Name
       value: Button
@@ -76836,6 +76896,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3915232116903968806, guid: 449af1384f6b46044957e92d2847da98, type: 3}
+      propertyPath: maxDist
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915232116903968806, guid: 449af1384f6b46044957e92d2847da98, type: 3}
+      propertyPath: minDist
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3984854041673124169, guid: 449af1384f6b46044957e92d2847da98, type: 3}
       propertyPath: m_Name
       value: Door
@@ -76865,3 +76933,4 @@ SceneRoots:
   - {fileID: 1019228720131407160}
   - {fileID: 7521623177198309898}
   - {fileID: 881789250}
+  - {fileID: 1151579976}

@@ -228,6 +228,50 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 11836904-f3b1-48d2-87ef-372b8f00d5f0
     m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5010278527789079256, guid: d47f05d11daaddd4382efdb35bb4bf20, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3629915335643486414, guid: d47f05d11daaddd4382efdb35bb4bf20, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5196181423247877509}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ab1d4a7a-5ade-4dff-a4e2-611c989b86af
+    m_ActionName: Player/Pause Menu Interaction[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 482986c7-8dbb-484f-9d9c-7e2bf7fe75a2
+    m_ActionName: UI/Pause Menu Interaction[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -245,6 +289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e42bc143c7a53045bd5266e79623797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minScale: 2
+  maxScale: 20
   scaleReq: 5
   scaleVal: 5
 --- !u!50 &1165118840784882340

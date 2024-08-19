@@ -7,6 +7,7 @@ public class ColliderAudio : MonoBehaviour
 {
     AudioSource audioSource;
     public List<AudioClip> audioClips = new List<AudioClip>();
+    public int lastClip = -1;
 
     void Awake()
     {
@@ -15,8 +16,9 @@ public class ColliderAudio : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        int clip = Random.Range(0, audioClips.Count - 1);
+        int clip = Random.Range(0, audioClips.Count);
         PlaySound(clip);
+        lastClip = clip;
     }
 
     void PlaySound(int clipIndex)

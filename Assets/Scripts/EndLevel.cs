@@ -1,27 +1,41 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
 {
+    public bool isSun = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        int SceneCount = SceneManager.sceneCountInBuildSettings;
         // Debug.Log("NextSceneIndex ="+nextSceneIndex);
         // Debug.Log("SceneCount ="+SceneCount);
         if (collision.tag == "Player")                                                       // check if player
         {
-            if (SceneCount > nextSceneIndex)
+            GetComponent<SpriteRenderer>().enabled = false;
+            if(isSun)
             {
-                SceneManager.LoadScene(nextSceneIndex);                                     // go to a next level
+                GameObject.Find("sunbeam").GetComponent<Animator>().SetTrigger("Consume");
             }
-            else
-            {
-                SceneManager.LoadScene("MainMenu");                                         // go to main menu
-            }
+            StartCoroutine(loadScene());
         }
+    }
+
+    private IEnumerator loadScene()
+    {
+        yield return new WaitForSeconds(1);
+
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        int SceneCount = SceneManager.sceneCountInBuildSettings;
+
+        if (SceneCount > nextSceneIndex)
+        {
+            SceneManager.LoadScene(nextSceneIndex);                                     // go to a next level
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");                                         // go to main menu
+        }
+
     }
 }

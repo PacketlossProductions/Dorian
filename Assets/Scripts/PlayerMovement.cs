@@ -14,8 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 6.0f;
     private bool facingRight = true;
 
-    private float minScale = 2.0f;
-    private float maxScale = 20.0f;
+    public float minScale = 2.0f;
+    public float maxScale = 20.0f;
     private float playerScale = 1.0f;
 
     // Scale smoothing
@@ -110,9 +110,22 @@ public class PlayerMovement : MonoBehaviour
         {
             if (pc.IsGrounded)
             {
-                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower * scaled(0.5f));
             }
         }
+    }
+
+    private float scaled(float factor)
+    {
+        if(playerScale > 1.0f)
+        {
+            return (playerScale - 1.0f) * factor + 1.0f;
+        }
+        if(playerScale < 1.0f)
+        {
+            return playerScale * (1 / factor);
+        }
+        return playerScale;
     }
 
     public void Scale(InputAction.CallbackContext context)

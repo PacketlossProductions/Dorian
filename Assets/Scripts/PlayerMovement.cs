@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float minScale = 2.0f;
     public float maxScale = 20.0f;
-    private float playerScale = 1.0f;
+    public float playerScale = 1.0f;
 
     // Scale smoothing
     private float scaleSpeed = 0.1f;

@@ -119,11 +119,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(playerScale > 1.0f)
         {
-            return (playerScale - 1.0f) * factor + 1.0f;
+            return Mathf.Log(playerScale,1/factor) + 1.0f;
         }
         if(playerScale < 1.0f)
         {
-            return playerScale * (1 / factor);
+            return playerScale;
         }
         return playerScale;
     }
@@ -145,7 +145,6 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 Drop();
-                Debug.LogWarning("HeldItem dropped up");
                 HeldItem = null;
             }
         }
@@ -170,7 +169,6 @@ public class PlayerMovement : MonoBehaviour
 
                 HeldItem.transform.position = gp.transform.position + offset;
                 HeldItem.transform.SetParent(transform, true);
-                Debug.LogWarning("HeldItem picked up");
                 HeldItem.GetComponent<Rigidbody2D>().isKinematic = true;
                 break;
             }

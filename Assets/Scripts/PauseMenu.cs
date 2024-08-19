@@ -22,6 +22,8 @@ public class PauseMenu : MonoBehaviour
     {
         if (context.started)
         {
+            DisableGameObject("ResetPanel");
+            DisableGameObject("BackToMenuPanel");
             GameObject player = GameObject.Find("Player");
             player.GetComponent<PlayerInput>().enabled = true;
             GetComponent<PlayerInput>().enabled = false;
@@ -47,6 +49,16 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void DisableGameObject(string ObjectName)
+    {
+        GameObject toDisable = GameObject.Find(ObjectName);
+        if (toDisable != null)
+        {
+            toDisable.transform.gameObject.SetActive(false);
+        }
+    }
+
 
     /// <summary>
     /// Find a GO. It might be inactive.

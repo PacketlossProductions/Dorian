@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 380
+  controlID: 131
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,15 +68,15 @@ MonoBehaviour:
     y: 0
     width: 509
     height: 1307
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 20}
   - {fileID: 14}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AnimatorControllerTool
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -123,17 +123,17 @@ MonoBehaviour:
     y: 823
     width: 2051
     height: 484
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
   - {fileID: 24}
   - {fileID: 17}
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 4
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 620
+  controlID: 62
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 20099
+  controlID: 63
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AnimationWindow
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -274,15 +274,15 @@ MonoBehaviour:
     y: 0
     width: 1737
     height: 823
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
   - {fileID: 23}
   - {fileID: 18}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -351,14 +351,14 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 4438.6766115
+  progressMessageClearTime: 4887.8379475
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -530,9 +530,9 @@ MonoBehaviour:
     - name: origin/master
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: master
@@ -542,7 +542,7 @@ MonoBehaviour:
         keys:
         - 00000000000000001000000000000000
         - f408c2f8a5bd61a499a6769b45a08bc1
-        - 8843b8bd8036d9640900c7e20a8e0c96
+        - b50f29445d1e7de4c98c3772542573a8
         values:
         - path: Assets
           label: Assets
@@ -580,11 +580,11 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scenes\Level 4.unity
-          label: Level 4.unity
+        - path: Assets\Scenes\New Scene.unity
+          label: New Scene.unity
           level: 2
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -592,18 +592,16 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Scenes\Level 4.unity
-            fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Scenes\Level
-              4.unity
-            projectPath: Assets\Scenes\Level 4.unity
+            path: Assets\Scenes\New Scene.unity
+            fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Scenes\New Scene.unity
+            projectPath: Assets\Scenes\New Scene.unity
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
+            indexStatus: 1
+            workTreeStatus: 1
       folders:
         keys:
         - Assets
         - Assets\Scenes
-        - UserSettings
         values:
         - path: Assets
           label: Assets
@@ -626,24 +624,6 @@ MonoBehaviour:
         - path: Assets\Scenes
           label: Scenes
           level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -723,11 +703,11 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scenes\Level 4.unity
-        label: Level 4.unity
+      - path: Assets\Scenes\New Scene.unity
+        label: New Scene.unity
         level: 2
         isFolder: 0
-        isContainer: 0
+        isContainer: 1
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -735,33 +715,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scenes\Level 4.unity
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Scenes\Level 4.unity
-          projectPath: Assets\Scenes\Level 4.unity
+          path: Assets\Scenes\New Scene.unity
+          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Scenes\New Scene.unity
+          projectPath: Assets\Scenes\New Scene.unity
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        label: EditorUserSettings.asset
-        level: 1
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scenes\New Scene.unity.meta
+        label: New Scene.unity.meta
+        level: 3
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -771,12 +733,12 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: UserSettings\EditorUserSettings.asset
-          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
+          path: Assets\Scenes\New Scene.unity.meta
+          fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Scenes\New Scene.unity.meta
+          projectPath: Assets\Scenes\New Scene.unity.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
+          indexStatus: 1
+          workTreeStatus: 1
       selectedNode:
         path: 
         label: 
@@ -797,27 +759,27 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Scenes\Level 4.unity
-      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Scenes\Level 4.unity
-      projectPath: Assets\Scenes\Level 4.unity
+    - path: Assets\Scenes\New Scene.unity
+      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Scenes\New Scene.unity
+      projectPath: Assets\Scenes\New Scene.unity
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\EditorUserSettings.asset
-      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\UserSettings\EditorUserSettings.asset
-      projectPath: UserSettings\EditorUserSettings.asset
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scenes\New Scene.unity.meta
+      fullPath: C:\Users\Martijn Braam\Downloads\Dorian\Assets\Scenes\New Scene.unity.meta
+      projectPath: Assets\Scenes\New Scene.unity.meta
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
+      indexStatus: 1
+      workTreeStatus: 1
     changedFilesText: 2 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-08-19T23:40:57.602+02:00
+      updatedTimeString: 2024-08-20T01:07:01.383+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-08-19T23:51:12.149+02:00
+      updatedTimeString: 2024-08-20T01:13:13.744+02:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-08-19T23:46:47.671+02:00
+      updatedTimeString: 2024-08-20T01:05:14.958+02:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -15039,13 +15001,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-08-19T23:11:13.953+02:00
+    updatedTimeString: 2024-08-20T01:07:01.383+02:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-08-19T23:13:13.925+02:00
+    updatedTimeString: 2024-08-20T01:13:13.773+02:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-08-19T23:18:08.280+02:00
+    updatedTimeString: 2024-08-20T01:13:13.744+02:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -15064,7 +15026,7 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: 
   repositoryProgressValue: 1
-  repositoryProgressMessage: 
+  repositoryProgressMessage: Pushed
   appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
@@ -15324,15 +15286,17 @@ MonoBehaviour:
     - {fileID: -4796637711390609209, guid: 48f78e75bba45c44898287f9a9c75027, type: 2}
     - {fileID: -3657816960747413745, guid: 69cf884c34519274b929a44a3f1de463, type: 2}
     - {fileID: -6821885666645004278, guid: 8a16e459380beae4c83d797738dfdcf0, type: 2}
+    - {fileID: -4784642948620788918, guid: 3373705afd9fe1447b8052d8b629388d, type: 2}
+    - {fileID: 7216890781185024243, guid: ab57d98d3e4ac28459ec73fe2c5bc3a5, type: 2}
     m_ValueSerializationHelper:
-    - e00: 1.4028777
+    - e00: 1.5026389
       e01: 0
       e02: 0
-      e03: -237.453
+      e03: -390.68604
       e10: 0
-      e11: 1.4028777
+      e11: 1.5026389
       e12: 0
-      e13: 6.9712067
+      e13: 2.464264
       e20: 0
       e21: 0
       e22: 1
@@ -15373,6 +15337,38 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1.7490062
+      e01: 0
+      e02: 0
+      e03: -7.713196
+      e10: 0
+      e11: 1.7490062
+      e12: 0
+      e13: 8.52887
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
     - e00: 1
       e01: 0
       e02: 0
@@ -15380,7 +15376,7 @@ MonoBehaviour:
       e10: 0
       e11: 1
       e12: 0
-      e13: 117
+      e13: 127
       e20: 0
       e21: 0
       e22: 1
@@ -15390,9 +15386,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 8a16e459380beae4c83d797738dfdcf0, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: ab57d98d3e4ac28459ec73fe2c5bc3a5, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -6821885666645004278, guid: 8a16e459380beae4c83d797738dfdcf0, type: 2}
+  - m_Target: {fileID: 7216890781185024243, guid: ab57d98d3e4ac28459ec73fe2c5bc3a5, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -15426,9 +15422,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 1095
+    y: 896
     width: 2050
-    height: 264
+    height: 463
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -15484,7 +15480,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -154332
+  m_LastSelectedObjectID: 40714
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -15530,7 +15526,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Objects/Button
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -15538,16 +15534,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Objects/Button
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Martijn Braam\Downloads\Dorian
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ea820000
-    m_LastClickedID: 33514
-    m_ExpandedIDs: 00000000da7a0000dc7a0000de7a0000e07a0000e27a0000e47a00006e8100008881000000ca9a3b
+    m_SelectedIDs: 447c0000
+    m_LastClickedID: 31812
+    m_ExpandedIDs: 000000003e7c0000407c0000427c0000447c0000467c0000487c00004a7c0000147f00001a7f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -15575,7 +15571,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000da7a0000dc7a0000de7a0000e07a0000e27a0000e47a0000
+    m_ExpandedIDs: 000000003e7c0000407c0000427c0000447c0000467c0000487c00004a7c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -15600,10 +15596,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 24a5fdff
-    m_LastClickedInstanceID: -154332
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000087900000c7900007cab00001a670200e4eb0200ec0effff000000004c6c000036800000227b000034470100aa790000147c0000e46e00001a730000c6e10000188100006e810000de810000ec7500008e730000987b0000507700006877000034790000107700008477000088770000d69effffd89f0000749600005aad000002770000ba790000088100005e840000ba7b00001a770000c2c40000
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000087900000c7900007cab00001a670200e4eb0200ec0effff000000004c6c000036800000227b000034470100aa790000147c0000e46e00001a730000c6e10000188100006e810000de810000ec7500008e730000987b0000507700006877000034790000107700008477000088770000d69effffd89f0000749600005aad000002770000ba790000088100005e840000ba7b00001a770000c2c40000fca20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -15715,9 +15711,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0ca1fdff
+      m_SelectedIDs: 58820000
       m_LastClickedID: 0
-      m_ExpandedIDs: a4befdff28d0fdffd83bfeff3872ffffbe8afffff0d6ffff10fbfffff4750000648f000004b30000bac50000
+      m_ExpandedIDs: 1e7bfeffc07bfeff0c80feff5681feffa082feff6684feff4286feffe487feff8c89feffac89feff549dfefffa9dfeff4ca2feff9aa3feffe8a4feffb2a6feff92a8feff38aafeffe4abfeff0aacfeff26b5feffaab5feff96defeff8ae7fefff6e7feff62eefeffd8eefeff2ef3feff80f4feffd2f5feffa0f7feff84f9feff2efbfeffdefcfeff06fdfeff7604ffff307effff8e7effffa47effff9890ffff6aabffff4ccdffff20d3ffff58d9fffff6dcffff96e0fffff0e3ffff10fbffff3eeb0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -15819,7 +15815,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
       id: unity-search-toolbar
       index: 1
@@ -15871,7 +15867,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Light Settings
       index: 1
@@ -15897,7 +15893,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Cloth Constraints
       index: 2
@@ -15910,7 +15906,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Cloth Collisions
       index: 4
@@ -15962,7 +15958,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Occlusion Culling
       index: 5
@@ -15975,7 +15971,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Physics Debugger
       index: 6
@@ -15988,7 +15984,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Scene Visibility
       index: 7
@@ -16001,7 +15997,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Particles
       index: 8
@@ -16051,7 +16047,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: -135, y: -43}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
@@ -16188,9 +16184,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 14.336632, y: -1.3013422, z: -2.1906955}
+    m_Target: {x: -12.460774, y: 16.965826, z: -0.6947773}
     speed: 2
-    m_Value: {x: 14.336632, y: -1.3013422, z: -2.1906955}
+    m_Value: {x: -12.460774, y: 16.965826, z: -0.6947773}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -16240,9 +16236,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.276293
+    m_Target: 68.12125
     speed: 2
-    m_Value: 5.276293
+    m_Value: 68.12125
   m_Ortho:
     m_Target: 1
     speed: 2

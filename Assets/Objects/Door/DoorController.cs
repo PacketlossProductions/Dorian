@@ -8,6 +8,7 @@ public class DoorController : MonoBehaviour
     Animator animator;
     Collider2D collider;
     public List<GameObject> switches = new List<GameObject>();
+    public bool inverted = false;
 
     private bool isOpen;
     public bool IsOpen { get => isOpen; set { isOpen = value; animator.SetBool("IsOpen", value); } }
@@ -32,7 +33,7 @@ public class DoorController : MonoBehaviour
                 }
             }
         }
-
+        unlocked = unlocked ^ inverted;
         IsOpen = unlocked;
         collider.enabled = !IsOpen;
     }

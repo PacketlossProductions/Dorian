@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     // Properties
     private bool _isMoving;
 
+    public bool isVeryHungry = false;
+
 
     // Animation state
     public bool IsMoving
@@ -128,20 +130,24 @@ public class PlayerMovement : MonoBehaviour
         {
             if (pc.IsGrounded)
             {
-                rb.velocity = new Vector2(rb.velocity.x, jumpingPower * scaled(0.5f));
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower * scaled(0.6f));
             }
         }
     }
 
     private float scaled(float factor)
     {
-        if(playerScale > 1.0f)
+        if(isVeryHungry && playerScale > 1)
         {
-            return (playerScale - 1.0f) * factor + 1.0f;
+            return playerScale * 0.5f;
         }
-        if(playerScale < 1.0f)
+        if (playerScale > 1 / factor)
         {
-            return playerScale * (1 / factor);
+            return Mathf.Log(playerScale, 1 / factor);
+        }
+        if (playerScale < 1 / factor)
+        {
+            return playerScale;
         }
         return playerScale;
     }

@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 public class EndLevel : MonoBehaviour
 {
     public bool isSun = false;
+    public AudioClip chomp;
+    AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,6 +19,7 @@ public class EndLevel : MonoBehaviour
         // Debug.Log("SceneCount ="+SceneCount);
         if (collision.tag == "Player")                                                       // check if player
         {
+            audioSource.PlayOneShot(chomp);
             GetComponent<SpriteRenderer>().enabled = false;
             if(isSun)
             {

@@ -303,11 +303,33 @@
                 },
                 {
                     "name": "",
+                    "id": "edf5b21b-84b8-4325-ac47-c2591cfa72a4",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6c7abade-d641-44c8-bfed-83266cabebe7",
                     "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Scale",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebd8f47f-160b-4ae4-94f3-94d33f1ec57b",
+                    "path": "<Gamepad>/rightStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "Scale",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -325,11 +347,33 @@
                 },
                 {
                     "name": "",
+                    "id": "2574c572-7d84-433b-9081-ebae49c1263c",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b5c97cb4-5f88-4b6c-a3e0-9aae58918049",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Pause Menu Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a437b3c-0f4d-4e08-aa0b-3ae15e506364",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "Pause Menu Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false

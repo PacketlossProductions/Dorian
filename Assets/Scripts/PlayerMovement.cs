@@ -130,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (pc.IsGrounded)
             {
+                //rb.velocity = (Physics2D.gravity / 9.81f) * jumpingPower * scaled(0.6f);
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower * scaled(0.6f));
             }
         }

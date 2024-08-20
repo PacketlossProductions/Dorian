@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isVeryHungry = false;
 
+    public float acceleration = 0.0f;
 
     // Animation state
     public bool IsMoving
@@ -62,8 +63,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(horizontal != 0 && acceleration < 1.0f)
+        {
+            acceleration += 0.1f;
+        }
         float direction = pc.IsWallFront ? 0.0f : horizontal;
-        rb.velocity = new Vector2(direction * speed * playerScale, rb.velocity.y);
+        rb.velocity = new Vector2(direction * speed * playerScale * acceleration, rb.velocity.y);
         if (!facingRight && horizontal > 0)
         {
             Flip();
@@ -122,6 +127,10 @@ public class PlayerMovement : MonoBehaviour
         Vector2 input = context.ReadValue<Vector2>();
         horizontal = input.x;
         IsMoving = input != Vector2.zero;
+        if(!IsMoving)
+        {
+            acceleration = 0.0f;
+        }
     }
 
     public void Jump(InputAction.CallbackContext context)

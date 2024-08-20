@@ -6,6 +6,8 @@ public class PlayerCollisions : MonoBehaviour
     CapsuleCollider2D rb;
     public ContactFilter2D castFilter;
     public float groundDistance = 0.05f;
+    Transform feetPos;
+    Transform headPos;
 
     RaycastHit2D[] groundHits = new RaycastHit2D[5];
     RaycastHit2D[] ceilingHits = new RaycastHit2D[5];
@@ -55,6 +57,8 @@ public class PlayerCollisions : MonoBehaviour
     {
         rb = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
+        feetPos = transform.Find("FeetPos");
+        headPos = transform.Find("TopPos");
     }
 
     // Update is called once per frame
@@ -62,14 +66,18 @@ public class PlayerCollisions : MonoBehaviour
     {
         IsGrounded = rb.Cast(Vector2.down, castFilter, groundHits, groundDistance) > 0;
         IsCeiling = rb.Cast(Vector2.up, castFilter, ceilingHits, groundDistance) > 0;
-        IsWallFront = rb.Cast(frontDirection, castFilter, frontHits, groundDistance) > 0;
-        IsWallBack = rb.Cast(backDirection, castFilter, backHits, groundDistance) > 0;
 
-        float frontDist = distanceTest(frontDirection, castFilter);
-        float backDist = distanceTest(frontDirection, castFilter);
+        float frontDist = distanceTest(frontDirection, castFilter, !IsGrounded);
+        float frontDist2 = distanceTest(frontDirection, castFilter, !IsGrounded, true);
 
-        IsWallBack = frontDist < (rb.size.x / 2.0f * transform.localScale.y) +groundDistance;
-        IsWallFront = backDist < (rb.size.x / 2.0f * transform.localScale.y) + groundDistance;
+        float backDist = distanceTest(frontDirection, castFilter, !IsGrounded);
+
+        IsWallBack = backDist < (rb.size.x / 2.0f * transform.localScale.y) + groundDistance;
+        IsWallFront = frontDist < (rb.size.x / 2.0f * transform.localScale.y) + groundDistance;
+        if(!IsWallFront)
+        {
+            IsWallFront = frontDist2 < (rb.size.x / 2.0f * transform.localScale.y) + groundDistance;
+        }
 
         float hspace = frontDist + backDist;
         float vspace = distanceTest(Vector2.up, castFilter) + distanceTest(Vector2.down, castFilter);
@@ -78,8 +86,18 @@ public class PlayerCollisions : MonoBehaviour
         squishyness = Mathf.Max(vsquish, hsquish);
     }
 
-    float distanceTest(Vector2 direction, ContactFilter2D contactFilter)
+    float distanceTest(Vector2 direction, ContactFilter2D contactFilter, bool feet=false, bool head=false)
     {
+        Vector3 source = transform.position;
+        if (feet)
+        {
+            source = feetPos.position;
+        }
+        if(head)
+        {
+            source = headPos.position;
+        }
+
         float maxdist = Mathf.Max(rb.size.x, rb.size.y) * transform.localScale.y * 2;
         float result = float.PositiveInfinity;
         if(Physics2D.Raycast(transform.position, direction, contactFilter, distanceHits, maxdist) > 0)

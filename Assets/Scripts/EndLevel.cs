@@ -34,7 +34,7 @@ public class EndLevel : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("MainMenu");                                         // go to main menu
+            SceneManager.LoadScene("Credits");                                         // go to credits
         }
 
     }

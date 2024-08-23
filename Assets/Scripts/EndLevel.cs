@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
@@ -7,10 +8,12 @@ public class EndLevel : MonoBehaviour
     public bool isSun = false;
     public AudioClip chomp;
     AudioSource audioSource;
+    Light2D light;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        light = GetComponent<Light2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,6 +27,9 @@ public class EndLevel : MonoBehaviour
             if(isSun)
             {
                 GameObject.Find("sunbeam").GetComponent<Animator>().SetTrigger("Consume");
+            } else
+            {
+                light.enabled = false;
             }
             StartCoroutine(loadScene());
         }

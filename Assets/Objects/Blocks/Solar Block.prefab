@@ -48,6 +48,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1194657557368673218, guid: 8473ed6f7edf7ac4386cb8a2dc639ece, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194657557368673218, guid: 8473ed6f7edf7ac4386cb8a2dc639ece, type: 3}
+      propertyPath: m_Color.g
+      value: 0.69589776
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194657557368673218, guid: 8473ed6f7edf7ac4386cb8a2dc639ece, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194657557368673218, guid: 8473ed6f7edf7ac4386cb8a2dc639ece, type: 3}
+      propertyPath: m_Intensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194657557368673218, guid: 8473ed6f7edf7ac4386cb8a2dc639ece, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194657557368673218, guid: 8473ed6f7edf7ac4386cb8a2dc639ece, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 2.45
+      objectReference: {fileID: 0}
     - target: {fileID: 1258686765130339219, guid: 8473ed6f7edf7ac4386cb8a2dc639ece, type: 3}
       propertyPath: m_Name
       value: Solar Block

@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ButtonController : MonoBehaviour
 {
@@ -11,12 +10,16 @@ public class ButtonController : MonoBehaviour
     public bool state = false;
     Collider2D col;
     Animator animator;
+    Light2D indicator;
+    public Color enabledColor;
+    public Color disabledColor;
 
 
     void Awake()
     {
         col = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
+        indicator = transform.Find("indicator").GetComponent<Light2D>();
     }
 
     void Update()
@@ -26,6 +29,7 @@ public class ButtonController : MonoBehaviour
             updateForce();
         }
         state = currentForce >= triggerWeight;
+        indicator.color = state ? enabledColor : disabledColor;
         animator.SetBool("IsTriggered", state);
     }
 
@@ -58,6 +62,16 @@ public class ButtonController : MonoBehaviour
     }
 
     private void OnCollisionExit2D(Collision2D collision)
+    {
+        updateForce();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        updateForce();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
         updateForce();
     }

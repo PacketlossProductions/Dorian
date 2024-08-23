@@ -75,12 +75,12 @@ GameObject:
   - component: {fileID: 5196181423247877509}
   - component: {fileID: 8223207521960089291}
   - component: {fileID: 1165118840784882340}
-  - component: {fileID: 2710408968103338734}
   - component: {fileID: 5881609717443838045}
   - component: {fileID: 8367582813426236931}
   - component: {fileID: -5769218126335685672}
   - component: {fileID: 8276916378890794238}
   - component: {fileID: 5704579425898060272}
+  - component: {fileID: 1038779785774077544}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -123,6 +123,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -198,15 +200,15 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: df1af162-11f8-4cdf-bc7a-df2809b28b98
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+    m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: fa46524a-caba-45d2-be17-03a849f3b1dd
-    m_ActionName: Player/Look[/Mouse/delta]
+    m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 10d086bb-7a81-444a-8f18-84227ee19f40
-    m_ActionName: Player/Fire[/Mouse/leftButton]
+    m_ActionName: 'Player/Fire[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8223207521960089291}
@@ -222,7 +224,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 82392017-2327-4c14-b487-4ac6022d35a8
-    m_ActionName: Player/Jump[/Keyboard/space]
+    m_ActionName: 'Player/Jump[/Keyboard/space]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8223207521960089291}
@@ -238,39 +240,39 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 5108b556-1503-441c-998e-eeaf9fde71f2
-    m_ActionName: Player/Scale[/Mouse/scroll/up]
+    m_ActionName: 'Player/Scale[/Mouse/scroll/up]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 3d06f1ad-1eec-4d0f-8c9b-e43fbcce001a
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 44d6d7d9-5e2b-41af-aee8-39722286aaed
-    m_ActionName: UI/Submit[/Keyboard/enter]
+    m_ActionName: 'UI/Submit[/Keyboard/enter]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 3ac27fe6-3e96-41c4-a3ad-7f1a00d03d8d
-    m_ActionName: UI/Cancel[/Keyboard/escape]
+    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 75958097-ab51-401b-994b-62d4a53cb2a9
-    m_ActionName: UI/Point[/Mouse/position]
+    m_ActionName: 'UI/Point[/Mouse/position]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 09e3894a-13fa-4f62-bfb4-b629219215ff
-    m_ActionName: UI/Click[/Mouse/leftButton]
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: c80b8c43-436a-47f7-a3d4-f071455ef457
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 895c5138-a964-4bbe-b67b-c130e873093b
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 4fc2696b-d5eb-47c2-9b99-685d4930597a
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 0a43331f-65ee-44f8-a3d3-fc9efa688371
@@ -294,7 +296,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 11836904-f3b1-48d2-87ef-372b8f00d5f0
-    m_ActionName: Player/Interact[/Keyboard/e]
+    m_ActionName: 'Player/Interact[/Keyboard/e]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: -5769218126335685672}
@@ -310,11 +312,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: ab1d4a7a-5ade-4dff-a4e2-611c989b86af
-    m_ActionName: Player/Pause Menu Interaction[/Keyboard/escape]
+    m_ActionName: 'Player/Pause Menu Interaction[/Keyboard/escape]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 482986c7-8dbb-484f-9d9c-7e2bf7fe75a2
-    m_ActionName: UI/Pause Menu Interaction[/Keyboard/escape]
+    m_ActionName: 'UI/Pause Menu Interaction[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -333,6 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClipWalk: {fileID: 8300000, guid: 5414d46255d30b641b1de5ee782204f3, type: 3}
+  scrollSpeed: 50
   minScale: 2
   maxScale: 20
   playerScale: 1
@@ -367,41 +370,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &2710408968103338734
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7514617763076939670}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.010984958, y: -0.0068659806}
-  m_Size: {x: 0.74021506, y: 0.64409596}
-  m_Direction: 1
 --- !u!114 &5881609717443838045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,7 +404,7 @@ MonoBehaviour:
   _isWallBack: 0
 --- !u!95 &8367582813426236931
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -450,6 +418,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -478,6 +447,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7401800653258449463, guid: 77d81ef9b37c5e44395e9ee49c80eba2, type: 2}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -578,6 +548,52 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 5414d46255d30b641b1de5ee782204f3, type: 3}
   - {fileID: 8300000, guid: c962a71f064e2624ea426ceea9bd5640, type: 3}
+--- !u!61 &1038779785774077544
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7514617763076939670}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.017694294, y: -0.013846397}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.7276617, y: 0.66150093}
+  m_EdgeRadius: 0
 --- !u!1 &7690849168406211760
 GameObject:
   m_ObjectHideFlags: 0

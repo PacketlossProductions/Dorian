@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerCollisions : MonoBehaviour
 {
     Animator animator;
-    CapsuleCollider2D rb;
+    BoxCollider2D rb;
     public ContactFilter2D castFilter;
     public float groundDistance = 0.05f;
     Transform feetPos;
@@ -55,7 +55,7 @@ public class PlayerCollisions : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<CapsuleCollider2D>();
+        rb = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         feetPos = transform.Find("FeetPos");
         headPos = transform.Find("TopPos");

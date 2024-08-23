@@ -15,7 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float speed = 8.0f;
-    private float jumpingPower = 6.0f;
+    private float jumpingPower = 9.0f;
+    public float scrollSpeed = 50.0f;
     private bool facingRight = true;
 
     public float minScale = 2.0f;
@@ -148,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isVeryHungry && playerScale > 1)
         {
-            return playerScale * 0.5f;
+            return playerScale * 0.57f;
         }
         if (playerScale > 1 / factor)
         {
@@ -163,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Scale(InputAction.CallbackContext context)
     {
-        float newScale = scaleReq + (context.ReadValue<float>() * -0.005f);
+        float newScale = scaleReq + (context.ReadValue<float>() * -0.005f * scrollSpeed);
         scaleReq = Mathf.Clamp(newScale, minScale, maxScale);
     }
 

@@ -18,6 +18,8 @@ public class GrabbingMechanic : MonoBehaviour
 
     private GameObject handPosition;
     private float previousScale = 1.0f;
+    private float previousGravity = 1.0f;
+    private float previousAngularDrag = 0.05f;
     private float pickupSelfScale = 1.0f;
     private Rigidbody2D hrb;
 
@@ -52,7 +54,10 @@ public class GrabbingMechanic : MonoBehaviour
         item.layer = (int)Mathf.Log(heldItemsLayer.value, 2);
         pickupSelfScale = transform.localScale.y;
         hrb = item.GetComponent<Rigidbody2D>();
+        previousGravity = hrb.gravityScale;
+        previousAngularDrag = hrb.angularDrag;
         hrb.gravityScale = 0.0f;
+        hrb.angularDrag = 5.0f;
         HeldItem = item;
     }
 
@@ -64,7 +69,8 @@ public class GrabbingMechanic : MonoBehaviour
         Debug.Log("Dropping " + HeldItem.name);
 
         HeldItem.layer = previousLayer;
-        hrb.gravityScale = 1.0f;
+        hrb.gravityScale = previousGravity;
+        hrb.angularDrag = previousAngularDrag;
         HeldItem = null;
         hrb = null;
     }

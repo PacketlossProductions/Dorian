@@ -17,6 +17,7 @@ public class ColliderAudio : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         int clip = Random.Range(0, audioClips.Count);
+        Debug.LogWarning("Picked clip " + clip + " from 0.." + (audioClips.Count - 1) + " for " + gameObject.name);
         PlaySound(clip);
         lastClip = clip;
     }

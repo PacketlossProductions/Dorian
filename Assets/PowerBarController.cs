@@ -8,7 +8,7 @@ public class PowerBarController : MonoBehaviour
     PlayerMovement pm;
     PlayerCollisions pc;
     RectTransform oneMarkTransform;
-    RectTransform powerTransform;
+    public RectTransform powerTransform;
     RectTransform requestTransform;
     Image powerImage;
     public Color powerBarColor;
@@ -24,7 +24,7 @@ public class PowerBarController : MonoBehaviour
 
 
         oneMarkTransform = transform.Find("One").GetComponent<RectTransform>();
-        powerTransform = transform.Find("Power").GetComponent<RectTransform>();
+        powerTransform = transform.Find("BarMask").Find("Power").GetComponent<RectTransform>();
         requestTransform = transform.Find("Request").GetComponent<RectTransform>();
 
         powerImage = powerTransform.gameObject.GetComponent<Image>();
